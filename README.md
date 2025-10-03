@@ -1,4 +1,3 @@
-/*************  ✨ Windsurf Command ⭐  *************/
 # Selenium Test Setup
 
 This repository provides a basic setup for Selenium tests using Java. It includes:
@@ -31,6 +30,3 @@ The Selenium tests can be configured using the following environment variables:
 * `DRIVER_PATH`: The path to the browser driver executable.
 
 The environment variables can be set using the `mvn` command line options or by creating a `settings.xml` file in the project root directory.
-
-Example `settings.xml` file:
-/*******  2e3ec3e7-4409-49da-bf0c-d25ab6758d4f  *******/
