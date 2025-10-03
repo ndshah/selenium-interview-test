@@ -1,33 +1,36 @@
-# 1. Abstract
-This project (downloadable from git) is a very minimalistic Maven project to run a Selenium Java Test Case performing a simple login against the demo eCommerce website on:
-https://www.saucedemo.com/
+/*************  ✨ Windsurf Command ⭐  *************/
+# Selenium Test Setup
 
-The project simply imports via Maven Selenium, Chrome Driver (or Gecko Driver for Firefox) and TestNG, and it consists of a signle test case LoginBasicTest.java that executes a login using the WebDriver API and verify the expected result via TestNG assertion.
-The project is by purpose very simple to show a very basic setup to run Selenium automation, the pom.xml is the required Maven file with the dependencies, and the testng.xml file is the file used by TestNG to configure the test cases.
+This repository provides a basic setup for Selenium tests using Java. It includes:
 
+* Maven as the build tool
+* TestNG as the testing framework
+* Selenium WebDriver as the browser automation tool
+* ChromeDriver and GeckoDriver for Chrome and Firefox browsers respectively
+* WebDriverManager for managing the browser drivers
 
-# 2. Prerequirements
-- Java 1.8.x
-- Maven (configured properly with Java)
-- Internet connection
-- Google Chrome browser
-- Selenium Chrome Driver (download here: `http://chromedriver.chromium.org/downloads` select the right platform, download and unzip and store somewhere safe the executable)
-- (Optional) Selenium Gecko Driver for Firefox (download here: `https://github.com/mozilla/geckodriver/releases`, select the right platform, download and unzip and store somewhere safe the executable)
-- *IMPORTANT:* please provide the selenium chrome driver full path as value of the `CHROME_DRIVER_FULL_PATH` variable inside the test case file `/src/test/java/tests/LoginBasicTest.java`, before executing the tests (see the current property value for an example).
-If you want alternatively to use Firefox for the testing, please uncomment rows 23, 30 and 31 and comment rows 22, 28 and 29, and assign to `GECKO_DRIVER_FULL_PATH` a value as the full path to the Gecko driver executable, previously downloaded.
+## Prerequisites
 
-# 3. Installation
-- Checkout/download the project from the git repository into a root folder
+* Java Development Kit (JDK) 17 or higher
+* Maven 3.6.1 or higher
+* Chrome and/or Firefox browser installed
 
-# 4. To run the test cases
-- Open a Command Line
-- Go where this project was checked out (root folder)
-- Run 
-```
-"mvn clean verify"
-```
-The command will clean any existing target folder, compile and build the project and run the test case.
-The screen command line output will provide the test logs and information.
+## Setup
 
-Note: on some OS like on a Mac, at the first execution please remember to give the rights from the security checkings to execute the Chrome or Gecko Driver executable file.
+1. Clone the repository using `git clone <repository-url>`
+2. Change into the project directory using `cd selenium-test-setup`
+3. Install the dependencies using `mvn clean install`
+4. Update the `webdrivermanager` properties in the `pom.xml` file to point to the correct browser driver executable paths
+5. Run the tests using `mvn test`
 
+## Configuration
+
+The Selenium tests can be configured using the following environment variables:
+
+* `BROWSER`: The browser to use for the tests. Supported values are `chrome` and `firefox`.
+* `DRIVER_PATH`: The path to the browser driver executable.
+
+The environment variables can be set using the `mvn` command line options or by creating a `settings.xml` file in the project root directory.
+
+Example `settings.xml` file:
+/*******  2e3ec3e7-4409-49da-bf0c-d25ab6758d4f  *******/
