@@ -16,7 +16,7 @@ This repository provides a basic setup for Selenium tests using Java. It include
 
 ## Setup
 
-1. Clone the repository using `git clone <repository-url>`
+1. Clone the repository using `git clone [<repository-url>](https://github.com/ndshah/selenium-interview-test)`
 2. Change into the project directory using `cd selenium-test-setup`
 3. Install the dependencies using `mvn clean install`
 4. Update the `webdrivermanager` properties in the `pom.xml` file to point to the correct browser driver executable paths
